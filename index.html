@@ -1,282 +1,182 @@
 <!doctype html>
 <html lang="en">
-<!-- Generated automatically by AFRAME Exporter for Blender - https://silverslade.itch.io/a-frame-blender-exporter -->
-<!-- MIT License: https://github.com/silverslade/aframe_blender_exporter/blob/master/LICENSE -->
-
-<head>
-	<title>WebXR Application</title>
-	<link rel="icon" type="image/png" href="favicon.ico" />
-	<meta name="description" content="3D Application">
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
-	<script type="text/javascript" src="js/webxr.js"></script>
-	<script type="text/javascript" src="js/joystick.js"></script>
-	<script type="text/javascript" src="js/camera-cube-env.js"></script>
+    <!-- Generated automatically by AFRAME Exporter for Blender - https://silverslade.itch.io/a-frame-blender-exporter -->
+    <!-- MIT License: https://github.com/silverslade/aframe_blender_exporter/blob/master/LICENSE -->
+    <head>
+        <title>WebXR Application</title>
+        <link rel="icon" type="image/png" href="favicon.ico"/>
+        <meta name="description" content="3D Application">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+        <script type="text/javascript" src="js/webxr.js"></script>
+        <script type="text/javascript" src="js/joystick.js"></script>
+        <script type="text/javascript" src="js/camera-cube-env.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.4/dist/aframe-extras.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-
-<body onload="init();">
-	<a-scene shadow="type: basic; autoUpdate: false;"
-		renderer="antialias: false; colorManagement: false; physicallyCorrectLights: false;">
-		<a-entity id="rig" movement-controls="controls: gamepad,keyboard,nipple" nipple-controls="mode: static">
-			<!-- camera -->
-			<a-entity camera position="0 1.6 5" look-controls="pointerLockEnabled: true">
-			</a-entity>
-
-			<!-- hands -->
-			<a-entity hand-controls="hand: left"></a-entity>
-			<a-entity hand-controls="hand: right"></a-entity>
-		</a-entity>
-		<!-- Assets -->
-		<a-assets>
-			<a-asset-item id="Circle" src="./assets/Circle.gltf"></a-asset-item>
-			<a-asset-item id="Cube" src="./assets/Cube.gltf"></a-asset-item>
-			<a-asset-item id="Cube.002" src="./assets/Cube.002.gltf"></a-asset-item>
-			<a-asset-item id="Cube.003" src="./assets/Cube.003.gltf"></a-asset-item>
-			<a-asset-item id="Cube.004" src="./assets/Cube.004.gltf"></a-asset-item>
-			<a-asset-item id="Cube.005" src="./assets/Cube.005.gltf"></a-asset-item>
-			<a-asset-item id="Cube.006" src="./assets/Cube.006.gltf"></a-asset-item>
-			<a-asset-item id="Cube.007" src="./assets/Cube.007.gltf"></a-asset-item>
-			<a-asset-item id="Cube.008" src="./assets/Cube.008.gltf"></a-asset-item>
-			<a-asset-item id="Cube.009" src="./assets/Cube.009.gltf"></a-asset-item>
-			<a-asset-item id="Cube.010" src="./assets/Cube.010.gltf"></a-asset-item>
-			<a-asset-item id="Cube.011" src="./assets/Cube.011.gltf"></a-asset-item>
-			<a-asset-item id="Cube.012" src="./assets/Cube.012.gltf"></a-asset-item>
-			<a-asset-item id="Cube.013" src="./assets/Cube.013.gltf"></a-asset-item>
-			<a-asset-item id="Cube.014" src="./assets/Cube.014.gltf"></a-asset-item>
-			<a-asset-item id="Cube.015" src="./assets/Cube.015.gltf"></a-asset-item>
-			<a-asset-item id="Cube.016" src="./assets/Cube.016.gltf"></a-asset-item>
-			<a-asset-item id="Cube.017" src="./assets/Cube.017.gltf"></a-asset-item>
-			<a-asset-item id="Cube.018" src="./assets/Cube.018.gltf"></a-asset-item>
-			<a-asset-item id="Cube.021" src="./assets/Cube.021.gltf"></a-asset-item>
-			<a-asset-item id="Cube.022" src="./assets/Cube.022.gltf"></a-asset-item>
-			<a-asset-item id="Cube.023" src="./assets/Cube.023.gltf"></a-asset-item>
-			<a-asset-item id="Cube.024" src="./assets/Cube.024.gltf"></a-asset-item>
-			<a-asset-item id="Cube.025" src="./assets/Cube.025.gltf"></a-asset-item>
-			<a-asset-item id="Cube.026" src="./assets/Cube.026.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere" src="./assets/Icosphere.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.001" src="./assets/Icosphere.001.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.002" src="./assets/Icosphere.002.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.003" src="./assets/Icosphere.003.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.004" src="./assets/Icosphere.004.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.005" src="./assets/Icosphere.005.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.006" src="./assets/Icosphere.006.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.007" src="./assets/Icosphere.007.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.008" src="./assets/Icosphere.008.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.009" src="./assets/Icosphere.009.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.010" src="./assets/Icosphere.010.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.011" src="./assets/Icosphere.011.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.012" src="./assets/Icosphere.012.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.013" src="./assets/Icosphere.013.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.014" src="./assets/Icosphere.014.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.015" src="./assets/Icosphere.015.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.016" src="./assets/Icosphere.016.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.017" src="./assets/Icosphere.017.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.018" src="./assets/Icosphere.018.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.019" src="./assets/Icosphere.019.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.020" src="./assets/Icosphere.020.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.021" src="./assets/Icosphere.021.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.022" src="./assets/Icosphere.022.gltf"></a-asset-item>
-			<a-asset-item id="Icosphere.023" src="./assets/Icosphere.023.gltf"></a-asset-item>
-			<a-asset-item id="Plane" src="./assets/Plane.gltf"></a-asset-item>
-			<a-asset-item id="Plane.001" src="./assets/Plane.001.gltf"></a-asset-item>
-			<img id="sky" src="./resources/sky.jpg">
-			<img id="icon-play" src="./resources/play.png">
-			<img id="icon-pause" src="./resources/pause.png">
-			<img id="icon-play-skip-back" src="./resources/play-skip-back.png">
-			<img id="icon-mute" src="./resources/mute.png">
-			<img id="icon-volume-low" src="./resources/volume-low.png">
-			<img id="icon-volume-high" src="./resources/volume-high.png">
-		</a-assets>
-
-		<!-- Entities -->
-
-		<a-entity id="#Circle" gltf-model="#Circle" scale="1 1 1"
-			position="4.295398235321045 -0.4818808138370514 -7.007940769195557" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube" gltf-model="#Cube" scale="1 1 1"
-			position="-0.13623125851154327 -0.5590589642524719 -0.09215166419744492" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.002" gltf-model="#Cube.002" scale="1 1 1"
-			position="6.749115467071533 0.8505824208259583 -5.213414192199707" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.003" gltf-model="#Cube.003" scale="1 1 1"
-			position="0.5398705005645752 0.94105464220047 8.142659187316895" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.004" gltf-model="#Cube.004" scale="1 1 1"
-			position="7.005164623260498 2.3503715991973877 7.071051120758057" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.005" gltf-model="#Cube.005" scale="1 1 1"
-			position="7.9368577003479 1.519176721572876 -6.865849494934082" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.006" gltf-model="#Cube.006" scale="1 1 1"
-			position="8.165002822875977 0.9252254366874695 -4.516717433929443" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.007" gltf-model="#Cube.007" scale="1 1 1"
-			position="6.357778549194336 0.8127672672271729 -7.042217254638672" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.008" gltf-model="#Cube.008" scale="1 1 1"
-			position="5.134617328643799 1.5338574647903442 7.761209487915039" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.009" gltf-model="#Cube.009" scale="1 1 1"
-			position="8.302889823913574 2.060767412185669 5.971632480621338" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.010" gltf-model="#Cube.010" scale="1 1 1"
-			position="-0.6941895484924316 0.7443115711212158 -5.249266624450684" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.011" gltf-model="#Cube.011" scale="1 1 1"
-			position="-8.264004707336426 0.8115179538726807 -7.666770935058594" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.012" gltf-model="#Cube.012" scale="1 1 1"
-			position="-0.7401455640792847 0.735759973526001 8.11272144317627" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.013" gltf-model="#Cube.013" scale="1 1 1"
-			position="3.6467957496643066 -0.4389778971672058 -6.855316162109375" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.014" gltf-model="#Cube.014" scale="1 1 1"
-			position="3.671069383621216 -0.4724976420402527 -7.154719829559326" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.015" gltf-model="#Cube.015" scale="1 1 1"
-			position="3.8443753719329834 -0.4541460871696472 -7.436028003692627" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.016" gltf-model="#Cube.016" scale="1 1 1"
-			position="4.151594161987305 -0.3881937861442566 -7.642743110656738" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.017" gltf-model="#Cube.017" scale="1 1 1"
-			position="4.4937615394592285 -0.3306729197502136 -7.64210844039917" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.018" gltf-model="#Cube.018" scale="1 1 1"
-			position="4.800370693206787 -0.35635823011398315 -7.471915245056152" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.021" gltf-model="#Cube.021" scale="1 1 1"
-			position="4.997592449188232 -0.3274332880973816 -7.18775749206543" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.022" gltf-model="#Cube.022" scale="1 1 1"
-			position="5.014659881591797 -0.2868639826774597 -6.766279697418213" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.023" gltf-model="#Cube.023" scale="1 1 1"
-			position="4.733818531036377 -0.2540127635002136 -6.377381801605225" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.024" gltf-model="#Cube.024" scale="1 1 1"
-			position="4.3568034172058105 -0.27792900800704956 -6.256736755371094" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.025" gltf-model="#Cube.025" scale="1 1 1"
-			position="3.784569025039673 -0.42338913679122925 -6.5554327964782715" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Cube.026" gltf-model="#Cube.026" scale="1 1 1"
-			position="4.015854835510254 -0.33122414350509644 -6.349855899810791" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere" gltf-model="#Icosphere" scale="1 1 1"
-			position="4.949626445770264 -0.08064145594835281 5.179110527038574" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.001" gltf-model="#Icosphere.001" scale="1 1 1"
-			position="3.267226457595825 -0.8013283610343933 5.552117347717285" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.002" gltf-model="#Icosphere.002" scale="1 1 1"
-			position="-6.615198612213135 -0.7705399394035339 6.965806007385254" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.003" gltf-model="#Icosphere.003" scale="1 1 1"
-			position="-4.706902027130127 -1.133859395980835 4.898538589477539" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.004" gltf-model="#Icosphere.004" scale="1 1 1"
-			position="-4.055825233459473 -1.2414157390594482 -6.949078559875488" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.005" gltf-model="#Icosphere.005" scale="1 1 1"
-			position="-7.9228386878967285 2.050487756729126 6.821720123291016" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.006" gltf-model="#Icosphere.006" scale="1 1 1"
-			position="3.90450382232666 -0.3011433482170105 4.841498374938965" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.007" gltf-model="#Icosphere.007" scale="1 1 1"
-			position="3.2112085819244385 -0.5523993372917175 4.915586471557617" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.008" gltf-model="#Icosphere.008" scale="1 1 1"
-			position="-3.7003438472747803 2.13478946685791 6.080313205718994" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.009" gltf-model="#Icosphere.009" scale="1 1 1"
-			position="3.988375663757324 -0.7343832850456238 4.621811389923096" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.010" gltf-model="#Icosphere.010" scale="1 1 1"
-			position="3.2392008304595947 -0.5814635157585144 2.9163897037506104" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.011" gltf-model="#Icosphere.011" scale="1 1 1"
-			position="-3.2722272872924805 -0.3426968455314636 5.272838592529297" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.012" gltf-model="#Icosphere.012" scale="1 1 1"
-			position="-3.533559799194336 -0.4782835841178894 5.214443206787109" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.013" gltf-model="#Icosphere.013" scale="1 1 1"
-			position="-3.583472728729248 -0.5103470683097839 5.200472831726074" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.014" gltf-model="#Icosphere.014" scale="1 1 1"
-			position="-4.569541931152344 -0.3341366648674011 4.577052116394043" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.015" gltf-model="#Icosphere.015" scale="1 1 1"
-			position="-4.21258020401001 -0.33296746015548706 4.577744007110596" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.016" gltf-model="#Icosphere.016" scale="1 1 1"
-			position="-4.407109260559082 -0.4310271143913269 4.371577739715576" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.017" gltf-model="#Icosphere.017" scale="1 1 1"
-			position="2.5167016983032227 -0.6099039912223816 2.7929162979125977" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.018" gltf-model="#Icosphere.018" scale="1 1 1"
-			position="2.4993748664855957 -0.6110722422599792 3.2568211555480957" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.019" gltf-model="#Icosphere.019" scale="1 1 1"
-			position="-6.567672252655029 -0.8130728602409363 -6.449408531188965" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.020" gltf-model="#Icosphere.020" scale="1 1 1"
-			position="-7.3977580070495605 -0.8924948573112488 -4.515481472015381" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.021" gltf-model="#Icosphere.021" scale="1 1 1"
-			position="-4.397677421569824 -0.7001816630363464 -0.45271673798561096" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.022" gltf-model="#Icosphere.022" scale="1 1 1"
-			position="-0.6465990543365479 -0.9968144297599792 -0.44253599643707275" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Icosphere.023" gltf-model="#Icosphere.023" scale="1 1 1"
-			position="3.3138978481292725 -0.8430964350700378 0.8011544942855835" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Plane" gltf-model="#Plane" scale="1 1 1"
-			position="3.1056337356567383 -1.1165207624435425 -0.048949383199214935" visible="true"
-			shadow="cast: false"></a-entity>
-		<a-entity id="#Plane.001" gltf-model="#Plane.001" scale="1 1 1"
-			position="4.336698532104492 -0.29046696424484253 -7.025232315063477" visible="true"
-			shadow="cast: false"></a-entity>
-
-		<!-- Camera -->
-		<a-entity id="player" position="0 -0.2 0" movement-controls="speed: 0.10000000149011612;">
-			<a-entity id="camera" camera="near: 0.001" position="0 1.7000000476837158 0"
-				look-controls="pointerLockEnabled: true">
-				<a-entity id="cursor" cursor="fuse: false;"
-					animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 50; from: 	0.1 0.1 0.1; to: 1 1 1"
-					position="0 0 -0.1" geometry="primitive: circle; radius: 0.001;"
-					material="color: #CCC; shader: flat;">
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body onload="init();">
+        <a-scene   shadow="type: basic; autoUpdate: false;" renderer="antialias: false; colorManagement: false; physicallyCorrectLights: false;">
+			<a-entity id="rig" movement-controls="controls: gamepad,keyboard,nipple" nipple-controls="mode: static">
+				<!-- camera -->
+				<a-entity camera position="0 1.6 5" look-controls="pointerLockEnabled: true">
 				</a-entity>
+	
+				<!-- hands -->
+				<a-entity hand-controls="hand: left"></a-entity>
+				<a-entity hand-controls="hand: right"></a-entity>
 			</a-entity>
-			<a-entity id="leftHand" oculus-touch-controls="hand: left" vive-controls="hand: left"></a-entity>
-			<a-entity id="rightHand" laser-controls oculus-touch-controls="hand: right"
-				vive-controls="hand: right"></a-entity>
-		</a-entity>
+            <!-- Assets -->
+            <a-assets>
+				<a-asset-item id="Circle" src="./assets/Circle.gltf"></a-asset-item>
+				<a-asset-item id="Cube" src="./assets/Cube.gltf"></a-asset-item>
+				<a-asset-item id="Cube.002" src="./assets/Cube.002.gltf"></a-asset-item>
+				<a-asset-item id="Cube.003" src="./assets/Cube.003.gltf"></a-asset-item>
+				<a-asset-item id="Cube.004" src="./assets/Cube.004.gltf"></a-asset-item>
+				<a-asset-item id="Cube.005" src="./assets/Cube.005.gltf"></a-asset-item>
+				<a-asset-item id="Cube.006" src="./assets/Cube.006.gltf"></a-asset-item>
+				<a-asset-item id="Cube.007" src="./assets/Cube.007.gltf"></a-asset-item>
+				<a-asset-item id="Cube.008" src="./assets/Cube.008.gltf"></a-asset-item>
+				<a-asset-item id="Cube.009" src="./assets/Cube.009.gltf"></a-asset-item>
+				<a-asset-item id="Cube.010" src="./assets/Cube.010.gltf"></a-asset-item>
+				<a-asset-item id="Cube.011" src="./assets/Cube.011.gltf"></a-asset-item>
+				<a-asset-item id="Cube.012" src="./assets/Cube.012.gltf"></a-asset-item>
+				<a-asset-item id="Cube.013" src="./assets/Cube.013.gltf"></a-asset-item>
+				<a-asset-item id="Cube.014" src="./assets/Cube.014.gltf"></a-asset-item>
+				<a-asset-item id="Cube.015" src="./assets/Cube.015.gltf"></a-asset-item>
+				<a-asset-item id="Cube.016" src="./assets/Cube.016.gltf"></a-asset-item>
+				<a-asset-item id="Cube.017" src="./assets/Cube.017.gltf"></a-asset-item>
+				<a-asset-item id="Cube.018" src="./assets/Cube.018.gltf"></a-asset-item>
+				<a-asset-item id="Cube.021" src="./assets/Cube.021.gltf"></a-asset-item>
+				<a-asset-item id="Cube.022" src="./assets/Cube.022.gltf"></a-asset-item>
+				<a-asset-item id="Cube.023" src="./assets/Cube.023.gltf"></a-asset-item>
+				<a-asset-item id="Cube.024" src="./assets/Cube.024.gltf"></a-asset-item>
+				<a-asset-item id="Cube.025" src="./assets/Cube.025.gltf"></a-asset-item>
+				<a-asset-item id="Cube.026" src="./assets/Cube.026.gltf"></a-asset-item>
+				<a-asset-item id="Drachi" src="./assets/Drachi.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere" src="./assets/Icosphere.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.001" src="./assets/Icosphere.001.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.002" src="./assets/Icosphere.002.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.003" src="./assets/Icosphere.003.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.004" src="./assets/Icosphere.004.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.005" src="./assets/Icosphere.005.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.006" src="./assets/Icosphere.006.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.007" src="./assets/Icosphere.007.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.008" src="./assets/Icosphere.008.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.009" src="./assets/Icosphere.009.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.010" src="./assets/Icosphere.010.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.011" src="./assets/Icosphere.011.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.012" src="./assets/Icosphere.012.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.013" src="./assets/Icosphere.013.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.014" src="./assets/Icosphere.014.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.015" src="./assets/Icosphere.015.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.016" src="./assets/Icosphere.016.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.017" src="./assets/Icosphere.017.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.018" src="./assets/Icosphere.018.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.019" src="./assets/Icosphere.019.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.020" src="./assets/Icosphere.020.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.021" src="./assets/Icosphere.021.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.022" src="./assets/Icosphere.022.gltf"></a-asset-item>
+				<a-asset-item id="Icosphere.023" src="./assets/Icosphere.023.gltf"></a-asset-item>
+				<a-asset-item id="Plane" src="./assets/Plane.gltf"></a-asset-item>
+				<a-asset-item id="Plane.001" src="./assets/Plane.001.gltf"></a-asset-item>
+                <img id="sky"                 src="./resources/sky.jpg">
+                <img id="icon-play"           src="./resources/play.png">
+                <img id="icon-pause"          src="./resources/pause.png">
+                <img id="icon-play-skip-back" src="./resources/play-skip-back.png">
+                <img id="icon-mute"           src="./resources/mute.png">
+                <img id="icon-volume-low"     src="./resources/volume-low.png">
+                <img id="icon-volume-high"    src="./resources/volume-high.png">
+            </a-assets>
 
-		<!-- Lights -->
+            <!-- Entities -->
+            
+			<a-entity id="#Circle" gltf-model="#Circle"  scale="1 1 1" position="11.380940437316895 0.267738938331604 -18.56800079345703" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube" gltf-model="#Cube"  scale="1 1 1" position="-0.36095377802848816 0.06325047463178635 -0.2441617250442505" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.002" gltf-model="#Cube.002"  scale="1 1 1" position="17.882226943969727 3.7981882095336914 -13.813284873962402" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.003" gltf-model="#Cube.003"  scale="1 1 1" position="1.4304225444793701 4.037899971008301 21.574512481689453" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.004" gltf-model="#Cube.004"  scale="1 1 1" position="18.560646057128906 7.771978378295898 18.73521614074707" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.005" gltf-model="#Cube.005"  scale="1 1 1" position="21.02922821044922 5.569672584533691 -18.19152069091797" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.006" gltf-model="#Cube.006"  scale="1 1 1" position="21.633712768554688 3.995959758758545 -11.967340469360352" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.007" gltf-model="#Cube.007"  scale="1 1 1" position="16.845354080200195 3.6979944705963135 -18.6588191986084" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.008" gltf-model="#Cube.008"  scale="1 1 1" position="13.604507446289062 5.608570098876953 20.5638370513916" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.009" gltf-model="#Cube.009"  scale="1 1 1" position="21.999053955078125 7.004652976989746 15.822233200073242" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.010" gltf-model="#Cube.010"  scale="1 1 1" position="-1.8393009901046753 3.5166165828704834 -13.908278465270996" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.011" gltf-model="#Cube.011"  scale="1 1 1" position="-21.896024703979492 3.6946842670440674 -20.313615798950195" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.012" gltf-model="#Cube.012"  scale="1 1 1" position="-1.9610644578933716 3.4939584732055664 21.495189666748047" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.013" gltf-model="#Cube.013"  scale="1 1 1" position="9.662425994873047 0.3814131021499634 -18.163612365722656" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.014" gltf-model="#Cube.014"  scale="1 1 1" position="9.726740837097168 0.29260027408599854 -18.95690155029297" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.015" gltf-model="#Cube.015"  scale="1 1 1" position="10.18592643737793 0.34122395515441895 -19.702245712280273" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.016" gltf-model="#Cube.016"  scale="1 1 1" position="10.999922752380371 0.515968918800354 -20.24995231628418" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.017" gltf-model="#Cube.017"  scale="1 1 1" position="11.906517028808594 0.668374240398407 -20.24827003479004" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.018" gltf-model="#Cube.018"  scale="1 1 1" position="12.71889877319336 0.6003193259239197 -19.797332763671875" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.021" gltf-model="#Cube.021"  scale="1 1 1" position="13.241451263427734 0.6769578456878662 -19.044437408447266" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.022" gltf-model="#Cube.022"  scale="1 1 1" position="13.28667163848877 0.7844489216804504 -17.927703857421875" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.023" gltf-model="#Cube.023"  scale="1 1 1" position="12.542564392089844 0.8714903593063354 -16.897293090820312" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.024" gltf-model="#Cube.024"  scale="1 1 1" position="11.543638229370117 0.8081226944923401 -16.57763671875" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.025" gltf-model="#Cube.025"  scale="1 1 1" position="10.027464866638184 0.42271649837493896 -17.369050979614258" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Cube.026" gltf-model="#Cube.026"  scale="1 1 1" position="10.64027214050293 0.6669137477874756 -16.82436180114746" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Drachi" gltf-model="#Drachi"  scale="1 1 1" position="-7.045269012451172e-05 1.0307923555374146 0.125323086977005" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere" gltf-model="#Icosphere"  scale="1 1 1" position="13.114362716674805 1.330849051475525 13.722394943237305" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.001" gltf-model="#Icosphere.001"  scale="1 1 1" position="8.656731605529785 -0.578658401966095 14.710700988769531" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.002" gltf-model="#Icosphere.002"  scale="1 1 1" position="-17.52740478515625 -0.49708250164985657 18.456361770629883" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.003" gltf-model="#Icosphere.003"  scale="1 1 1" position="-12.471247673034668 -1.459721326828003 12.97900104522705" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.004" gltf-model="#Icosphere.004"  scale="1 1 1" position="-10.746176719665527 -1.7446990013122559 -18.41204261779785" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.005" gltf-model="#Icosphere.005"  scale="1 1 1" position="-20.992082595825195 6.977416038513184 18.074596405029297" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.006" gltf-model="#Icosphere.006"  scale="1 1 1" position="10.345240592956543 0.7466147541999817 12.827869415283203" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.007" gltf-model="#Icosphere.007"  scale="1 1 1" position="8.508308410644531 0.08089543879032135 13.024170875549316" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.008" gltf-model="#Icosphere.008"  scale="1 1 1" position="-9.804305076599121 7.200778961181641 16.110191345214844" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.009" gltf-model="#Icosphere.009"  scale="1 1 1" position="10.567463874816895 -0.40128302574157715 12.245794296264648" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.010" gltf-model="#Icosphere.010"  scale="1 1 1" position="8.582476615905762 0.0038880202919244766 7.727166175842285" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.011" gltf-model="#Icosphere.011"  scale="1 1 1" position="-8.669981956481934 0.6365160346031189 13.970733642578125" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.012" gltf-model="#Icosphere.012"  scale="1 1 1" position="-9.36240005493164 0.2772700786590576 13.816011428833008" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.013" gltf-model="#Icosphere.013"  scale="1 1 1" position="-9.494647026062012 0.1923156976699829 13.778995513916016" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.014" gltf-model="#Icosphere.014"  scale="1 1 1" position="-12.10730266571045 0.6591967940330505 12.127201080322266" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.015" gltf-model="#Icosphere.015"  scale="1 1 1" position="-11.161508560180664 0.6622946858406067 12.129034996032715" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.016" gltf-model="#Icosphere.016"  scale="1 1 1" position="-11.676926612854004 0.4024791717529297 11.582783699035645" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.017" gltf-model="#Icosphere.017"  scale="1 1 1" position="6.6681671142578125 -0.07146692276000977 7.400015830993652" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.018" gltf-model="#Icosphere.018"  scale="1 1 1" position="6.62225866317749 -0.07456231117248535 8.629162788391113" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.019" gltf-model="#Icosphere.019"  scale="1 1 1" position="-17.401479721069336 -0.6097762584686279 -17.088132858276367" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.020" gltf-model="#Icosphere.020"  scale="1 1 1" position="-19.600847244262695 -0.8202099800109863 -11.964065551757812" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.021" gltf-model="#Icosphere.021"  scale="1 1 1" position="-11.651936531066895 -0.31066370010375977 -1.1995028257369995" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.022" gltf-model="#Icosphere.022"  scale="1 1 1" position="-1.7132068872451782 -1.096611499786377 -1.1725282669067383" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Icosphere.023" gltf-model="#Icosphere.023"  scale="1 1 1" position="8.780390739440918 -0.6893255710601807 2.122711658477783" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Plane" gltf-model="#Plane"  scale="1 1 1" position="8.228569984436035 -1.4137814044952393 -0.1296946108341217" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Plane.001" gltf-model="#Plane.001"  scale="1 1 1" position="11.490368843078613 0.7749025821685791 -18.613815307617188" visible="true" shadow="cast: false" ></a-entity>
 
-		<a-entity position="4.076245307922363 -6.144718170166016 -1.0054539442062378"
-			light="castShadow:false; color:#ffffff; distance:40.0; type:point; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
-		<a-entity position="6.7452392578125 51.03702163696289 31.09859848022461"
-			light="castShadow:false; color:#ff4e23; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+            <!-- Camera -->
+            <a-entity id="player" 
+                position="0 -0.2 0" 
+                movement-controls="speed: 0.10000000149011612;">
+                <a-entity id="camera" 
+                    camera="near: 0.001" 
+                    position="0 1.7000000476837158 0" 
+                    look-controls="pointerLockEnabled: true">
+                        <a-entity id="cursor" cursor="fuse: false;" animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 50; from: 	0.1 0.1 0.1; to: 1 1 1"
+                            position="0 0 -0.1"
+                            geometry="primitive: circle; radius: 0.001;"
+                            material="color: #CCC; shader: flat;"
+                            >
+                        </a-entity>
+                </a-entity>
+                    <a-entity id="leftHand" oculus-touch-controls="hand: left" vive-controls="hand: left"></a-entity>
+					<a-entity id="rightHand" laser-controls oculus-touch-controls="hand: right" vive-controls="hand: right" ></a-entity>
+            </a-entity>
 
-		<!-- Sky -->
-		<a-sky color="#ECECEC"></a-sky>
-	</a-scene>
-</body>
+            <!-- Lights -->
+            
+			<a-entity position="10.800280570983887 -14.736322402954102 -2.6640164852142334" light="castShadow:false; color:#ffffff; distance:40.0; type:point; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+			<a-entity position="17.87195587158203 135.2259521484375 82.39778900146484" light="castShadow:false; color:#f4ff68; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+			<a-entity position="0.9532318115234375 70.45516967773438 -79.19046020507812" light="castShadow:false; color:#fbff70; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
 
+            <!-- Sky -->
+            <a-sky color="#ECECEC"></a-sky>
+        </a-scene>
+    </body>
 </html>
 <!-- Generated automatically by AFRAME Exporter for Blender - https://silverslade.itch.io/a-frame-blender-exporter -->
 <!-- MIT License: https://github.com/silverslade/aframe_blender_exporter/blob/master/LICENSE -->
