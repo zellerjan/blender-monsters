@@ -20,7 +20,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body onload="init();">
-        <a-scene   shadow="type: basic; autoUpdate: false;" renderer="antialias: false; colorManagement: false; physicallyCorrectLights: false;">
+        <a-scene   shadow="type: pcfsoft; autoUpdate: false;" renderer="antialias: false; colorManagement: false; physicallyCorrectLights: false;">
 			<a-entity id="rig" movement-controls="controls: gamepad,keyboard,nipple" nipple-controls="mode: static">
 				<!-- camera -->
 				<a-entity camera position="0 1.6 5" look-controls="pointerLockEnabled: true">
@@ -172,7 +172,8 @@
 			<a-entity position="10.800280570983887 -14.736322402954102 -2.6640164852142334" light="castShadow:false; color:#ffffff; distance:40.0; type:point; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
 			<a-entity position="17.87195587158203 135.2259521484375 82.39778900146484" light="castShadow:false; color:#f4ff68; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
 			<a-entity position="0.9532318115234375 70.45516967773438 -79.19046020507812" light="castShadow:false; color:#fbff70; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
-
+			<a-light type="directional" color="#fff2cc" intensity="0.8"position="3 5 -2" castShadow="true"></a-light>
+			<a-light type="ambient" color="#ddd" intensity="0.4"></a-light>
             <!-- Sky -->
 			<a-sky src="#sky" material="" geometry="" rotation="0 90 0"></a-sky>
 
