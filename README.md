@@ -2,7 +2,12 @@
 https://zellerjan.github.io/blender-monsters/
 
 ## Things to add
-
+```
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.4/dist/aframe-extras.min.js"></script>
+```
+```
+<a-scene shadow="type: pcfsoft">....
+```
 ```
 <a-entity
       id="rig"
@@ -22,6 +27,8 @@ https://zellerjan.github.io/blender-monsters/
     </a-entity>
 ```
 
+
 ```
-    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.4/dist/aframe-extras.min.js"></script>
+<a-light type="directional" color="#fff2cc" intensity="0.8"position="3 5 -2" castShadow="true"></a-light>
+			<a-light type="ambient" color="#ddd" intensity="0.4"></a-light>
 ```
