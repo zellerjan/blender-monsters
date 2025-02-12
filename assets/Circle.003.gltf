@@ -28,7 +28,7 @@
 				"b_export":1,
 				"export_path":"/Users/erbvi/Desktop/",
 				"s_output":"exporting...",
-				"s_project_name":"aframe14-prj",
+				"s_project_name":"aframe15-prj",
 				"b_interactive":0
 			},
 			"name":"Scene",
@@ -39,7 +39,17 @@
 	],
 	"nodes":[
 		{
-			"name":"Circle.003"
+			"name":"Circle.003",
+			"scale":[
+				0.22701023519039154,
+				0.22701023519039154,
+				0.22701023519039154
+			],
+			"translation":[
+				-9.256081581115723,
+				-4.086321830749512,
+				0
+			]
 		}
 	]
 }
