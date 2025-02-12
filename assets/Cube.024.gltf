@@ -28,7 +28,7 @@
 				"b_export":1,
 				"export_path":"/Users/erbvi/Desktop/",
 				"s_output":"exporting...",
-				"s_project_name":"aframe17-prj",
+				"s_project_name":"aframe18-prj",
 				"b_interactive":0
 			},
 			"name":"Scene",
@@ -45,14 +45,14 @@
 			"mesh":0,
 			"name":"Cube.024",
 			"rotation":[
-				0.08987151831388474,
+				0.08987156301736832,
 				-0.29575926065444946,
-				0.3458849787712097,
+				0.3458850085735321,
 				0.8858968019485474
 			],
 			"scale":[
 				0.42137160897254944,
-				0.4213716983795166,
+				0.4213716685771942,
 				0.421371728181839
 			]
 		}
