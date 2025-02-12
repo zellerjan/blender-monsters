@@ -11,9 +11,13 @@ This project was created within three days as part of a learning experience with
 
 
 ### Dev Notes
+Things to add to the Repo after Export with aFrame Plugin:
+1. Library for Movement-Support
 ```
 <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.4/dist/aframe-extras.min.js"></script>
 ```
+
+2. Controls and Hands for Movement
 ```
 <a-scene shadow="type: pcfsoft">....
 ```
@@ -36,7 +40,7 @@ This project was created within three days as part of a learning experience with
     </a-entity>
 ```
 
-
+3. Environment: Light + Sky Color
 ```
 <a-light type="directional" color="#fff2cc" intensity="0.8"position="3 5 -2" castShadow="true"></a-light>
 <a-light type="ambient" color="#ddd" intensity="0.4"></a-light>
