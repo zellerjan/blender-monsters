@@ -1,0 +1,45 @@
+{
+	"asset":{
+		"generator":"Khronos glTF Blender I/O v3.5.30",
+		"version":"2.0"
+	},
+	"scene":0,
+	"scenes":[
+		{
+			"extras":{
+				"skinify":{
+					"connect_mesh":0,
+					"connect_parents":0,
+					"generate_all":0,
+					"thickness":0.800000011920929,
+					"finger_thickness":0.25,
+					"apply_mod":1,
+					"parent_armature":1,
+					"sub_level":1
+				},
+				"camera_settings":{},
+				"uuid":"4b9dda3c-b783-43d8-9180-a20d4c855c48",
+				"assets reported":{},
+				"b_settings":1,
+				"b_player":0,
+				"s_cubemap_path":"",
+				"b_renderer":0,
+				"s_cubemap_ext":"jpg",
+				"b_export":1,
+				"export_path":"/Users/erbvi/Desktop/",
+				"s_output":"exporting...",
+				"s_project_name":"aframe14-prj",
+				"b_interactive":0
+			},
+			"name":"Scene",
+			"nodes":[
+				0
+			]
+		}
+	],
+	"nodes":[
+		{
+			"name":"Circle.003"
+		}
+	]
+}
