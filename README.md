@@ -10,7 +10,7 @@ This project was created within three days as part of a learning experience with
 
 
 
-### Dev Notes
+## Dev Notes
 Things to add to the Repo after Export with aFrame Plugin:
 1. Library for Movement-Support
 ```
