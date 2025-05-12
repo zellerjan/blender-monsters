@@ -16,14 +16,14 @@
     <script type="text/javascript" src="js/joystick.js"></script>
     <script type="text/javascript" src="js/camera-cube-env.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.4/dist/aframe-extras.min.js"></script>
-
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body onload="init();">
-    <a-scene shadow="type: pcfsoft; autoUpdate: false;"
+    <a-scene shadow="type: basic; autoUpdate: false;"
         renderer="antialias: false; colorManagement: false; physicallyCorrectLights: false;">
+        <!-- Assets -->
+
         <a-entity id="rig" movement-controls="controls: gamepad,keyboard,nipple" nipple-controls="mode: static">
             <!-- camera -->
             <a-entity camera position="0 1.6 5" look-controls="pointerLockEnabled: true">
@@ -33,17 +33,27 @@
             <a-entity hand-controls="hand: left"></a-entity>
             <a-entity hand-controls="hand: right"></a-entity>
         </a-entity>
-        <!-- Assets -->
+
         <a-assets>
             <a-asset-item id="BezierCurve.001" src="./assets/BezierCurve.001.gltf"></a-asset-item>
-            <a-asset-item id="Circle" src="./assets/Circle.gltf"></a-asset-item>
-            <a-asset-item id="Cone.001" src="./assets/Cone.001.gltf"></a-asset-item>
+            <a-asset-item id="Cone" src="./assets/Cone.gltf"></a-asset-item>
             <a-asset-item id="Cube" src="./assets/Cube.gltf"></a-asset-item>
+            <a-asset-item id="Diego Body" src="./assets/Diego Body.gltf"></a-asset-item>
+            <a-asset-item id="Diego Hair" src="./assets/Diego Hair.gltf"></a-asset-item>
+            <a-asset-item id="Diego Teeth" src="./assets/Diego Teeth.gltf"></a-asset-item>
+            <a-asset-item id="Max Cone" src="./assets/Max Cone.gltf"></a-asset-item>
+            <a-asset-item id="Max Suzanne" src="./assets/Max Suzanne.gltf"></a-asset-item>
+            <a-asset-item id="Monster Joakim2" src="./assets/Monster Joakim2.gltf"></a-asset-item>
+            <a-asset-item id="Monster Noah" src="./assets/Monster Noah.gltf"></a-asset-item>
+            <a-asset-item id="Monster Noemi 2.001" src="./assets/Monster Noemi 2.001.gltf"></a-asset-item>
+            <a-asset-item id="Monster Pano" src="./assets/Monster Pano.gltf"></a-asset-item>
+            <a-asset-item id="Monster Paula" src="./assets/Monster Paula.gltf"></a-asset-item>
+            <a-asset-item id="Monster Ramon" src="./assets/Monster Ramon.gltf"></a-asset-item>
+            <a-asset-item id="Monster Samir" src="./assets/Monster Samir.gltf"></a-asset-item>
+            <a-asset-item id="Monster Timon" src="./assets/Monster Timon.gltf"></a-asset-item>
+            <a-asset-item id="Monster Silvan" src="./assets/Monster Silvan.gltf"></a-asset-item>
+            <a-asset-item id="Monster Noemi 2" src="./assets/Monster Noemi 2.gltf"></a-asset-item>
             <a-asset-item id="Plane" src="./assets/Plane.gltf"></a-asset-item>
-            <a-asset-item id="Plane.001" src="./assets/Plane.001.gltf"></a-asset-item>
-            <a-asset-item id="Sphere" src="./assets/Sphere.gltf"></a-asset-item>
-            <a-asset-item id="Sphere.001" src="./assets/Sphere.001.gltf"></a-asset-item>
-            <a-asset-item id="Sphere.007" src="./assets/Sphere.007.gltf"></a-asset-item>
             <img id="sky" src="./resources/sky.jpg">
             <img id="icon-play" src="./resources/play.png">
             <img id="icon-pause" src="./resources/pause.png">
@@ -56,32 +66,61 @@
         <!-- Entities -->
 
         <a-entity id="#BezierCurve.001" gltf-model="#BezierCurve.001" scale="1 1 1"
-            position="15.845659255981445 3.3947057723999023 -0.5942198634147644" visible="true"
+            position="-21.701736450195312 2.1957051753997803 0.28231698274612427" visible="true"
             shadow="cast: false"></a-entity>
-        <a-entity id="#Circle" gltf-model="#Circle" scale="1 1 1"
-            position="-8.577343940734863 6.039423942565918 0.14396585524082184" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Cone.001" gltf-model="#Cone.001" scale="1 1 1"
-            position="6.87375545501709 4.348686695098877 -1.0184890031814575" visible="true"
+        <a-entity id="#Cone" gltf-model="#Cone" scale="1 1 1"
+            position="32.74287033081055 3.166670799255371 0.9533799886703491" visible="true"
             shadow="cast: false"></a-entity>
         <a-entity id="#Cube" gltf-model="#Cube" scale="1 1 1"
-            position="-0.8996761441230774 42.882240295410156 -26.903709411621094" visible="true"
+            position="-31.795852661132812 3.6279757022857666 0.008845508098602295" visible="true"
             shadow="cast: false"></a-entity>
-        <a-entity id="#Plane" gltf-model="#Plane" scale="1 1 1"
-            position="36.86983108520508 5.949233055114746 -1.235597848892212" visible="true"
+        <a-entity id="#Diego Body" gltf-model="#Diego Body" scale="1 1 1"
+            position="-47.75490951538086 2.6470351219177246 -0.2494676113128662" visible="true"
             shadow="cast: false"></a-entity>
-        <a-entity id="#Plane.001" gltf-model="#Plane.001" scale="1 1 1"
-            position="-17.371803283691406 6.152529716491699 0.33727362751960754" visible="true"
+        <a-entity id="#Diego Hair" gltf-model="#Diego Hair" scale="1 1 1"
+            position="-47.71540832519531 4.429346561431885 -0.5948046445846558" visible="true"
             shadow="cast: false"></a-entity>
-        <a-entity id="#Sphere" gltf-model="#Sphere" scale="1 1 1"
-            position="0.011406861245632172 1.2100410461425781 -0.16132953763008118" visible="true"
+        <a-entity id="#Diego Teeth" gltf-model="#Diego Teeth" scale="1 1 1"
+            position="-47.70838165283203 3.280000925064087 0.028023481369018555" visible="true"
             shadow="cast: false"></a-entity>
-        <a-entity id="#Sphere.001" gltf-model="#Sphere.001" scale="1 1 1"
-            position="25.60770034790039 5.466211318969727 -2.435518264770508" visible="true"
+        <a-entity id="#Max Cone" gltf-model="#Max Cone" scale="1 1 1"
+            position="47.053611755371094 2.619317054748535 0.4384244680404663" visible="true"
             shadow="cast: false"></a-entity>
-        <a-entity id="#Sphere.007" gltf-model="#Sphere.007" scale="1 1 1"
-            position="-27.87268829345703 7.998471736907959 0.16642475128173828" visible="true"
+        <a-entity id="#Max Suzanne" gltf-model="#Max Suzanne" scale="1 1 1"
+            position="47.0996208190918 3.4604721069335938 0.8988226652145386" visible="true"
             shadow="cast: false"></a-entity>
+        <a-entity id="#Monster Joakim2" gltf-model="#Monster Joakim2" scale="1 1 1"
+            position="7.174760818481445 3.1898677349090576 -0.07924962043762207" visible="true"
+            shadow="cast: false"></a-entity>
+        <a-entity id="#Monster Noah" gltf-model="#Monster Noah" scale="1 1 1"
+            position="-38.64205551147461 3.881110191345215 0.013614933006465435" visible="true"
+            shadow="cast: false"></a-entity>
+        <a-entity id="#Monster Noemi 2.001" gltf-model="#Monster Noemi 2.001" scale="1 1 1"
+            position="12.929530143737793 0.5607163906097412 0.7256064414978027" visible="true"
+            shadow="cast: false"></a-entity>
+        <a-entity id="#Monster Pano" gltf-model="#Monster Pano" scale="1 1 1"
+            position="-26.697256088256836 4.497501850128174 0.08313345909118652" visible="true"
+            shadow="cast: false"></a-entity>
+        <a-entity id="#Monster Paula" gltf-model="#Monster Paula" scale="1 1 1"
+            position="0.23847776651382446 3.971545457839966 0.47194671630859375" visible="true"
+            shadow="cast: false"></a-entity>
+        <a-entity id="#Monster Ramon" gltf-model="#Monster Ramon" scale="1 1 1"
+            position="-13.812399864196777 3.870476722717285 0.10144102573394775" visible="true"
+            shadow="cast: false"></a-entity>
+        <a-entity id="#Monster Samir" gltf-model="#Monster Samir" scale="1 1 1"
+            position="18.87195587158203 5.125143527984619 0.32035553455352783" visible="true"
+            shadow="cast: false"></a-entity>
+        <a-entity id="#Monster Timon" gltf-model="#Monster Timon" scale="1 1 1"
+            position="39.65811538696289 3.99583101272583 0.503948986530304" visible="true"
+            shadow="cast: false"></a-entity>
+        <a-entity id="#Monster Silvan" gltf-model="#Monster Silvan" scale="1 1 1"
+            position="25.690534591674805 2.372347593307495 0.848328173160553" visible="true"
+            shadow="cast: false"></a-entity>
+        <a-entity id="#Monster Noemi 2" gltf-model="#Monster Noemi 2" scale="1 1 1"
+            position="-6.992619037628174 1.3280997276306152 -0.1600358486175537" visible="true"
+            shadow="cast: false"></a-entity>
+        <a-entity id="#Plane" gltf-model="#Plane" scale="1 1 1" position="0.0 40.532623291015625 -11.760960578918457"
+            visible="true" shadow="cast: false"></a-entity>
 
         <!-- Camera -->
         <a-entity id="player" position="0 -0.2 0" movement-controls="speed: 0.10000000149011612;">
@@ -100,6 +139,17 @@
 
         <!-- Lights -->
 
+        <a-entity position="50.71441650390625 27.212543487548828 26.844383239746094"
+            light="castShadow:false; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+        <a-entity position="-43.60400390625 27.212543487548828 26.844383239746094"
+            light="castShadow:false; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+        <a-entity position="0.0 17.71710968017578 -22.140750885009766"
+            light="castShadow:false; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+        <a-entity position="0.0 100.93122100830078 -53.383304595947266"
+            light="castShadow:false; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+
+        <!-- Lights -->
+
         <a-entity position="-37.508323669433594 25.168075561523438 -38.820945739746094"
             light="castShadow:false; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
         <a-entity position="45.91603469848633 25.24570083618164 -46.135677337646484"
@@ -107,9 +157,11 @@
         <a-entity position="0.0 44.64914321899414 -0.0"
             light="castShadow:false; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
 
-      
+
         <!-- Sky -->
         <a-sky color="#69DAFF"></a-sky>
+
+
     </a-scene>
 </body>
 
