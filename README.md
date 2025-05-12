@@ -33,8 +33,21 @@ Things to add to the Repo after Export with aFrame Plugin:
 
 3. Environment: Light + Sky Color
 ```
-<a-light type="directional" color="#fff2cc" intensity="0.8"position="3 5 -2" castShadow="true"></a-light>
-<a-light type="ambient" color="#ddd" intensity="0.4"></a-light>
-<!-- Sky -->
-<a-sky color="#69DAFF"></a-sky>
+  <!-- Lights -->
+  <a-entity position="50.71441650390625 27.212543487548828 26.844383239746094"
+      light="castShadow:true; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+  <a-entity position="-43.60400390625 27.212543487548828 26.844383239746094"
+      light="castShadow:true; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+  <a-entity position="0.0 17.71710968017578 -22.140750885009766"
+      light="castShadow:true; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+  <a-entity position="0.0 100.93122100830078 -53.383304595947266"
+      light="castShadow:true; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+
+  <!-- Sky -->
+  <a-sky color="#FFF"></a-sky>
+```
+
+4. Set Rendering True
+```
+renderer="antialias: true;
 ```
