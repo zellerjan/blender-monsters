@@ -1,27 +1,26 @@
 <!doctype html>
 <html lang="en">
-<!-- Generated automatically by AFRAME Exporter for Blender - https://silverslade.itch.io/a-frame-blender-exporter -->
-<!-- MIT License: https://github.com/silverslade/aframe_blender_exporter/blob/master/LICENSE -->
-
-<head>
-    <title>VR Monster Blender</title>
-    <link rel="icon" type="image/png" href="favicon.ico" />
-    <meta name="description" content="3D Application">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.4/dist/aframe-extras.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
-    <script type="text/javascript" src="js/webxr.js"></script>
-    <script type="text/javascript" src="js/joystick.js"></script>
-    <script type="text/javascript" src="js/camera-cube-env.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-
-<body onload="init();">
-    <a-scene shadow="type: pcfsoft; autoUpdate: false;"
+    <!-- Generated automatically by AFRAME Exporter for Blender - https://silverslade.itch.io/a-frame-blender-exporter -->
+    <!-- MIT License: https://github.com/silverslade/aframe_blender_exporter/blob/master/LICENSE -->
+    <head>
+        <title>Blender Monsters</title>
+        <link rel="icon" type="image/png" href="favicon.ico"/>
+        <meta name="description" content="3D Application">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.4/dist/aframe-extras.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+        
+        <script type="text/javascript" src="js/webxr.js"></script>
+        <script type="text/javascript" src="js/joystick.js"></script>
+        <script type="text/javascript" src="js/camera-cube-env.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body onload="init();">
+         <a-scene shadow="type: pcfsoft; autoUpdate: false;"
         renderer="antialias: true; colorManagement: false; physicallyCorrectLights: false;">
         <a-entity id="rig" movement-controls="controls: gamepad,keyboard,nipple" nipple-controls="mode: static">
             <!-- camera -->
@@ -32,129 +31,94 @@
             <a-entity hand-controls="hand: left"></a-entity>
             <a-entity hand-controls="hand: right"></a-entity>
         </a-entity>
+            <a-assets>
+				<a-asset-item id="Diego Body" src="./assets/Diego Body.gltf"></a-asset-item>
+				<a-asset-item id="Diego Hair" src="./assets/Diego Hair.gltf"></a-asset-item>
+				<a-asset-item id="Diego Teeth" src="./assets/Diego Teeth.gltf"></a-asset-item>
+				<a-asset-item id="max cocoon" src="./assets/max cocoon.gltf"></a-asset-item>
+				<a-asset-item id="Max Cone" src="./assets/Max Cone.gltf"></a-asset-item>
+				<a-asset-item id="Max Suzanne" src="./assets/Max Suzanne.gltf"></a-asset-item>
+				<a-asset-item id="max Suzanne" src="./assets/max Suzanne.gltf"></a-asset-item>
+				<a-asset-item id="Monster Aurelia" src="./assets/Monster Aurelia.gltf"></a-asset-item>
+				<a-asset-item id="Monster Hilal" src="./assets/Monster Hilal.gltf"></a-asset-item>
+				<a-asset-item id="Monster Isabel" src="./assets/Monster Isabel.gltf"></a-asset-item>
+				<a-asset-item id="Monster Joakim2" src="./assets/Monster Joakim2.gltf"></a-asset-item>
+				<a-asset-item id="Monster Noah" src="./assets/Monster Noah.gltf"></a-asset-item>
+				<a-asset-item id="Monster Noemi 2.001" src="./assets/Monster Noemi 2.001.gltf"></a-asset-item>
+				<a-asset-item id="Monster Pano" src="./assets/Monster Pano.gltf"></a-asset-item>
+				<a-asset-item id="Monster Paula" src="./assets/Monster Paula.gltf"></a-asset-item>
+				<a-asset-item id="Monster Ramon" src="./assets/Monster Ramon.gltf"></a-asset-item>
+				<a-asset-item id="Monster Samir" src="./assets/Monster Samir.gltf"></a-asset-item>
+				<a-asset-item id="Monster Timon" src="./assets/Monster Timon.gltf"></a-asset-item>
+				<a-asset-item id="Monster Silvan" src="./assets/Monster Silvan.gltf"></a-asset-item>
+				<a-asset-item id="Monster Noemi 2" src="./assets/Monster Noemi 2.gltf"></a-asset-item>
+				<a-asset-item id="Plane" src="./assets/Plane.gltf"></a-asset-item>
+				<a-asset-item id="Plane.001" src="./assets/Plane.001.gltf"></a-asset-item>
+                <img id="sky"                 src="./resources/sky.jpg">
+                <img id="icon-play"           src="./resources/play.png">
+                <img id="icon-pause"          src="./resources/pause.png">
+                <img id="icon-play-skip-back" src="./resources/play-skip-back.png">
+                <img id="icon-mute"           src="./resources/mute.png">
+                <img id="icon-volume-low"     src="./resources/volume-low.png">
+                <img id="icon-volume-high"    src="./resources/volume-high.png">
+            </a-assets>
 
-        <a-assets>
-            <a-asset-item id="BezierCurve.001" src="./assets/BezierCurve.001.gltf"></a-asset-item>
-            <a-asset-item id="Cone" src="./assets/Cone.gltf"></a-asset-item>
-            <a-asset-item id="Cube" src="./assets/Cube.gltf"></a-asset-item>
-            <a-asset-item id="Diego Body" src="./assets/Diego Body.gltf"></a-asset-item>
-            <a-asset-item id="Diego Hair" src="./assets/Diego Hair.gltf"></a-asset-item>
-            <a-asset-item id="Diego Teeth" src="./assets/Diego Teeth.gltf"></a-asset-item>
-            <a-asset-item id="Max Cone" src="./assets/Max Cone.gltf"></a-asset-item>
-            <a-asset-item id="Max Suzanne" src="./assets/Max Suzanne.gltf"></a-asset-item>
-            <a-asset-item id="Monster Joakim2" src="./assets/Monster Joakim2.gltf"></a-asset-item>
-            <a-asset-item id="Monster Noah" src="./assets/Monster Noah.gltf"></a-asset-item>
-            <a-asset-item id="Monster Noemi 2.001" src="./assets/Monster Noemi 2.001.gltf"></a-asset-item>
-            <a-asset-item id="Monster Pano" src="./assets/Monster Pano.gltf"></a-asset-item>
-            <a-asset-item id="Monster Paula" src="./assets/Monster Paula.gltf"></a-asset-item>
-            <a-asset-item id="Monster Ramon" src="./assets/Monster Ramon.gltf"></a-asset-item>
-            <a-asset-item id="Monster Samir" src="./assets/Monster Samir.gltf"></a-asset-item>
-            <a-asset-item id="Monster Timon" src="./assets/Monster Timon.gltf"></a-asset-item>
-            <a-asset-item id="Monster Silvan" src="./assets/Monster Silvan.gltf"></a-asset-item>
-            <a-asset-item id="Monster Noemi 2" src="./assets/Monster Noemi 2.gltf"></a-asset-item>
-            <a-asset-item id="Plane" src="./assets/Plane.gltf"></a-asset-item>
-            <img id="sky" src="./resources/sky.jpg">
-            <img id="icon-play" src="./resources/play.png">
-            <img id="icon-pause" src="./resources/pause.png">
-            <img id="icon-play-skip-back" src="./resources/play-skip-back.png">
-            <img id="icon-mute" src="./resources/mute.png">
-            <img id="icon-volume-low" src="./resources/volume-low.png">
-            <img id="icon-volume-high" src="./resources/volume-high.png">
-        </a-assets>
+            <!-- Entities -->
+            
+			<a-entity id="#Diego Body" gltf-model="#Diego Body"  scale="1 1 1" position="-47.75490951538086 0.6265419125556946 -0.24946749210357666" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Diego Hair" gltf-model="#Diego Hair"  scale="1 1 1" position="-47.71540832519531 2.4088504314422607 -0.59479820728302" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Diego Teeth" gltf-model="#Diego Teeth"  scale="1 1 1" position="-47.70838165283203 1.2595083713531494 0.028023460879921913" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#max cocoon" gltf-model="#max cocoon"  scale="1 1 1" position="-0.003543555736541748 0.0035433322191238403 -0.003543853759765625" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Max Cone" gltf-model="#Max Cone"  scale="1 1 1" position="47.053611755371094 0.5988245010375977 0.4384244680404663" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Max Suzanne" gltf-model="#Max Suzanne"  scale="1 1 1" position="47.0996208190918 1.4399795532226562 0.8988226652145386" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#max Suzanne" gltf-model="#max Suzanne"  scale="1 1 1" position="47.34956359863281 2.843477487564087 0.4260035753250122" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Monster Aurelia" gltf-model="#Monster Aurelia"  scale="1 1 1" position="-21.701738357543945 0.1752181202173233 0.282318651676178" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Monster Hilal" gltf-model="#Monster Hilal"  scale="1 1 1" position="-31.795852661132812 1.6074841022491455 0.00884417537599802" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Monster Isabel" gltf-model="#Monster Isabel"  scale="1 1 1" position="32.74287033081055 1.1461758613586426 0.9533782601356506" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Monster Joakim2" gltf-model="#Monster Joakim2"  scale="1 1 1" position="7.17476224899292 1.169377326965332 -0.07925043255090714" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Monster Noah" gltf-model="#Monster Noah"  scale="1 1 1" position="-38.64205551147461 1.8606168031692505 0.013614899478852749" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Monster Noemi 2.001" gltf-model="#Monster Noemi 2.001"  scale="1 1 1" position="12.929530143737793 -1.2052305936813354 0.7256076335906982" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Monster Pano" gltf-model="#Monster Pano"  scale="1 1 1" position="-26.697256088256836 2.4769792556762695 0.08313307911157608" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Monster Paula" gltf-model="#Monster Paula"  scale="1 1 1" position="0.23847734928131104 1.951043963432312 0.471944659948349" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Monster Ramon" gltf-model="#Monster Ramon"  scale="1 1 1" position="-13.812399864196777 1.8499804735183716 0.101442851126194" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Monster Samir" gltf-model="#Monster Samir"  scale="1 1 1" position="19.086904525756836 4.444655895233154 0.4108083248138428" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Monster Timon" gltf-model="#Monster Timon"  scale="1 1 1" position="39.65811538696289 1.9764025211334229 0.5040081143379211" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Monster Silvan" gltf-model="#Monster Silvan"  scale="1 1 1" position="25.690534591674805 1.0117779970169067 0.8483282327651978" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Monster Noemi 2" gltf-model="#Monster Noemi 2"  scale="1 1 1" position="-6.992619037628174 -0.6923927664756775 -0.1600363403558731" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Plane" gltf-model="#Plane"  scale="1 1 1" position="0.0 38.51212692260742 -11.760961532592773" visible="true" shadow="cast: false" ></a-entity>
+			<a-entity id="#Plane.001" gltf-model="#Plane.001"  scale="1 1 1" position="47.29578399658203 1.8602749109268188 -0.11214323341846466" visible="true" shadow="cast: false" ></a-entity>
 
-        <!-- Entities -->
-
-        <a-entity id="#BezierCurve.001" gltf-model="#BezierCurve.001" scale="1 1 1"
-            position="-21.701736450195312 2.1957051753997803 0.28231698274612427" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Cone" gltf-model="#Cone" scale="1 1 1"
-            position="32.74287033081055 3.166670799255371 0.9533799886703491" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Cube" gltf-model="#Cube" scale="1 1 1"
-            position="-31.795852661132812 3.6279757022857666 0.008845508098602295" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Diego Body" gltf-model="#Diego Body" scale="1 1 1"
-            position="-47.75490951538086 2.6470351219177246 -0.2494676113128662" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Diego Hair" gltf-model="#Diego Hair" scale="1 1 1"
-            position="-47.71540832519531 4.429346561431885 -0.5948046445846558" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Diego Teeth" gltf-model="#Diego Teeth" scale="1 1 1"
-            position="-47.70838165283203 3.280000925064087 0.028023481369018555" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Max Cone" gltf-model="#Max Cone" scale="1 1 1"
-            position="47.053611755371094 2.619317054748535 0.4384244680404663" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Max Suzanne" gltf-model="#Max Suzanne" scale="1 1 1"
-            position="47.0996208190918 3.4604721069335938 0.8988226652145386" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Monster Joakim2" gltf-model="#Monster Joakim2" scale="1 1 1"
-            position="7.174760818481445 3.1898677349090576 -0.07924962043762207" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Monster Noah" gltf-model="#Monster Noah" scale="1 1 1"
-            position="-38.64205551147461 3.881110191345215 0.013614933006465435" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Monster Noemi 2.001" gltf-model="#Monster Noemi 2.001" scale="1 1 1"
-            position="12.929530143737793 0.5607163906097412 0.7256064414978027" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Monster Pano" gltf-model="#Monster Pano" scale="1 1 1"
-            position="-26.697256088256836 4.497501850128174 0.08313345909118652" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Monster Paula" gltf-model="#Monster Paula" scale="1 1 1"
-            position="0.23847776651382446 3.971545457839966 0.47194671630859375" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Monster Ramon" gltf-model="#Monster Ramon" scale="1 1 1"
-            position="-13.812399864196777 3.870476722717285 0.10144102573394775" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Monster Samir" gltf-model="#Monster Samir" scale="1 1 1"
-            position="18.87195587158203 5.125143527984619 0.32035553455352783" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Monster Timon" gltf-model="#Monster Timon" scale="1 1 1"
-            position="39.65811538696289 3.99583101272583 0.503948986530304" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Monster Silvan" gltf-model="#Monster Silvan" scale="1 1 1"
-            position="25.690534591674805 2.372347593307495 0.848328173160553" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Monster Noemi 2" gltf-model="#Monster Noemi 2" scale="1 1 1"
-            position="-6.992619037628174 1.3280997276306152 -0.1600358486175537" visible="true"
-            shadow="cast: false"></a-entity>
-        <a-entity id="#Plane" gltf-model="#Plane" scale="1 1 1" position="0.0 40.532623291015625 -11.760960578918457"
-            visible="true" shadow="cast: false"></a-entity>
-
-        <!-- Camera -->
-        <a-entity id="player" position="0 -0.2 0" movement-controls="speed: 0.10000000149011612;">
-            <a-entity id="camera" camera="near: 0.001" position="0 1.7000000476837158 0"
-                look-controls="pointerLockEnabled: true">
-                <a-entity id="cursor" cursor="fuse: false;"
-                    animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 50; from: 	0.1 0.1 0.1; to: 1 1 1"
-                    position="0 0 -0.1" geometry="primitive: circle; radius: 0.001;"
-                    material="color: #CCC; shader: flat;">
+            <!-- Camera -->
+            <a-entity id="player" 
+                position="0 -0.2 0" 
+                movement-controls="speed: 0.10000000149011612;">
+                <a-entity id="camera" 
+                    camera="near: 0.001" 
+                    position="0 1.7000000476837158 0" 
+                    look-controls="pointerLockEnabled: true">
+                        <a-entity id="cursor" cursor="fuse: false;" animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 50; from: 	0.1 0.1 0.1; to: 1 1 1"
+                            position="0 0 -0.1"
+                            geometry="primitive: circle; radius: 0.001;"
+                            material="color: #CCC; shader: flat;"
+                            >
+                        </a-entity>
                 </a-entity>
+                    <a-entity id="leftHand" oculus-touch-controls="hand: left" vive-controls="hand: left"></a-entity>
+					<a-entity id="rightHand" laser-controls oculus-touch-controls="hand: right" vive-controls="hand: right" ></a-entity>
             </a-entity>
-            <a-entity id="leftHand" oculus-touch-controls="hand: left" vive-controls="hand: left"></a-entity>
-            <a-entity id="rightHand" laser-controls oculus-touch-controls="hand: right"
-                vive-controls="hand: right"></a-entity>
-        </a-entity>
 
-        <!-- Lights -->
+            <!-- Lights -->
+            
+			<a-entity position="50.71441650390625 25.19205093383789 26.844383239746094" light="castShadow:true; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+			<a-entity position="-43.60400390625 25.19205093383789 26.844383239746094" light="castShadow:true; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+			<a-entity position="0.0 15.696617126464844 -22.140750885009766" light="castShadow:true; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+			<a-entity position="13.179468154907227 17.741111755371094 -0.0" light="castShadow:true; color:#ffffff; distance:40.0; type:spot; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+			<a-entity position="0.0 98.91072845458984 -53.383304595947266" light="castShadow:true; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
 
-        <a-entity position="50.71441650390625 27.212543487548828 26.844383239746094"
-            light="castShadow:true; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
-        <a-entity position="-43.60400390625 27.212543487548828 26.844383239746094"
-            light="castShadow:true; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
-        <a-entity position="0.0 17.71710968017578 -22.140750885009766"
-            light="castShadow:true; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
-        <a-entity position="0.0 100.93122100830078 -53.383304595947266"
-            light="castShadow:true; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
-
-    
-        <!-- Sky -->
-        <a-sky color="#FFF"></a-sky>
-
-
-    </a-scene>
-</body>
-
+            <!-- Sky -->
+            <a-sky color="#FFF"></a-sky>
+        </a-scene>
+    </body>
 </html>
 <!-- Generated automatically by AFRAME Exporter for Blender - https://silverslade.itch.io/a-frame-blender-exporter -->
 <!-- MIT License: https://github.com/silverslade/aframe_blender_exporter/blob/master/LICENSE -->

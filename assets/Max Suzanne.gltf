@@ -26,11 +26,11 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"Max Suzanne",
+			"name":"max Suzanne",
 			"scale":[
-				1.3581361770629883,
-				1.3581361770629883,
-				1.3581361770629883
+				1.5874881744384766,
+				1.5874881744384766,
+				1.5874881744384766
 			]
 		}
 	],
@@ -50,13 +50,13 @@
 					"sheenRoughnessFactor":1
 				}
 			},
-			"name":"Material.001",
+			"name":"Material.025",
 			"pbrMetallicRoughness":{}
 		}
 	],
 	"meshes":[
 		{
-			"name":"Suzanne",
+			"name":"Suzanne.001",
 			"primitives":[
 				{
 					"attributes":{
@@ -81,7 +81,7 @@
 		{
 			"bufferView":5,
 			"mimeType":"image/png",
-			"name":"Untitled2"
+			"name":"max_suzanne"
 		}
 	],
 	"accessors":[
